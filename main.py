@@ -88,8 +88,11 @@ def main():
     dispatcher.add_handler(CommandHandler('start', start))
     dispatcher.add_handler(MessageHandler(None, processor))
 
-    updater.start_polling()
+    PORT = int(os.environ.get('PORT', '443'))
+    HOOK_URL = 'https://instadlbot.herokuapp.com' + '/' + TOKEN
+    updater.start_webhook(listen='0.0.0.0', port=PORT, url_path=TOKEN, webhook_url=HOOK_URL)
     updater.idle()
+    
 
 
 if __name__ == '__main__':
