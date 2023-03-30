@@ -80,7 +80,7 @@ def processor(update, context):
 
 def main():
     updater = Updater(
-        token = '6200080434:AAE_HowNjNOvFzxAu_ffFyYjj0YCln9m_Ec',
+        token = '5237668676:AAFyjlUtTi7udmNIu-gPmaEQZGY5vaQJepM',
         use_context = True,
         request_kwargs = {'read_timeout': 1000, 'connect_timeout': 1000}
     )
